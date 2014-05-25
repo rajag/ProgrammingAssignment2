@@ -5,6 +5,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     #function to create a list with set and get values for the matrix
+    
     s<-NULL
     # set the value
     set <- function (y){
@@ -13,6 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
         
     }
     #functions for getting, and setting the globals
+    
     get <- function() x
     setInverse <- function(Inverse) m <<- Inverse
     getInverse <- function() m
@@ -24,11 +26,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+ ## Return a matrix that is the inverse of 'x'
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-    
-    ## Return a matrix that is the inverse of 'x'
+ 
     s <- x$getinverse()
     if(!is.null(s)) {
         message("get cached data")  
